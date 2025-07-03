@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Boletos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Boletos</h1>
+
+        <div class="controls">
+            <button id="exportData">Exportar Dados</button>
+            <input type="file" id="importData" accept=".json">
+        </div>
+
+        <div class="columns">
+            <div class="column" id="pessoaFisicaColumn">
+                <h2>Pessoa Física</h2>
+                <form id="addPfBoletoForm">
+                    <input type="text" id="pfDescription" placeholder="Descrição do Boleto" required>
+                    <input type="date" id="pfDueDate" required>
+                    <button type="submit">Adicionar Boleto</button>
+                </form>
+                <ul id="pfBoletosList">
+                    </ul>
+            </div>
+
+            <div class="column" id="pessoaJuridicaColumn">
+                <h2>Pessoa Jurídica</h2>
+                <form id="addPjBoletoForm">
+                    <input type="text" id="pjDescription" placeholder="Descrição do Boleto" required>
+                    <input type="date" id="pjDueDate" required>
+                    <button type="submit">Adicionar Boleto</button>
+                </form>
+                <ul id="pjBoletosList">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
